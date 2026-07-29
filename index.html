@@ -590,7 +590,7 @@ footer {
   <section id="ueber" class="section-animate">
     <h2>Über mich</h2>
     <div class="ueber-mich">
-      <img src="Ajla-Jugo.jpg" alt="Professionelles Portrait von Ajla Jugo" class="portraitbild lightbox-img">
+      <img src="Ajla-Jugo.jpg" alt="Professionelles Portrait von Ajla Jugo" class="portraitbild">
       <div>
         <p><strong>Name:</strong> Ajla Jugo</p>
         <p><strong>Alter:</strong> 26 Jahre</p>
@@ -705,13 +705,7 @@ footer {
   </section>
 </main>
 <footer><p>© 2026 Ajla Jugo</p></footer>
-<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightbox-img" alt=""></div>
 <script>
-  const bilder = document.querySelectorAll('.lightbox-img');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  bilder.forEach(img => img.addEventListener('click', () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; lightboxImg.alt = img.alt; }));
-  lightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
   const sections = document.querySelectorAll('.section-animate');
   const animateOnScroll = () => sections.forEach(section => { if (section.getBoundingClientRect().top < window.innerHeight - 100) section.classList.add('visible'); });
   window.addEventListener('scroll', animateOnScroll); animateOnScroll();
